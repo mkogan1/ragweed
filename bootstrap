@@ -33,7 +33,8 @@ virtualenv --system-site-packages --distribute virtualenv
 # work-around change in pip 1.5
 ./virtualenv/bin/pip install six
 ./virtualenv/bin/pip install -I nose
-./virtualenv/bin/pip install setuptools==32.3.1
+# latest setuptools supporting python 2.7
+./virtualenv/bin/pip install setuptools==44.1.0
 
 ./virtualenv/bin/pip install -U -r requirements.txt
 
