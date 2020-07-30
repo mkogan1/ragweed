@@ -27,8 +27,8 @@ fi
 
 virtualenv --system-site-packages --distribute virtualenv
 
-# avoid pip bugs
-./virtualenv/bin/pip install --upgrade pip
+# pin pip to 18.1 for https://tracker.ceph.com/issues/46699
+./virtualenv/bin/pip install --upgrade pip==18.1
 
 # work-around change in pip 1.5
 ./virtualenv/bin/pip install six
